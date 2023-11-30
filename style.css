@@ -1,3 +1,4 @@
+
 .Navbar {
     background-color: rgb(140, 127, 255);
     color: lightpink;
@@ -12,7 +13,7 @@ h1.Horiseon  {
     justify-content:space-between;
     align-items: center;
     color: blueviolet;
-    margin: 40px 900px 0px 50px;
+    margin: 40px 200px 0px 50px;
 }
 
 .Navitem  {
@@ -20,10 +21,16 @@ h1.Horiseon  {
     border: 5px;
     border-color: lightpink;
     border-style: solid;
+    transition: 03sec ease;
+}
+
+.Navitem:hover {
+    background-color: cadetblue;
 }
 
 .body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
 }
 
 .image {
@@ -31,6 +38,11 @@ h1.Horiseon  {
     width: 100%;
     display: block;
     margin: 0 auto;
+    transition: 0.3sec ease;
+}
+
+.image:hover {
+    filter: brightness(1.2)
 }
 
 .div.wrapper {
@@ -44,12 +56,19 @@ h1.Horiseon  {
     margin: 2% 2% 2% 2%;
     background-color:rgb(140, 127, 255) ;
     color:lightpink;
+    padding: 20px white;
 }
+   
 .box1 {
     grid-area: 1/1/2/2;
     display: flex;
     align-items: center;
     margin: 10px;
+    transition: 0.3sec ease;
+}
+
+.box1:hover {
+    background-color: blue;
 }
 
 .img1  {
@@ -70,18 +89,29 @@ h1.Horiseon  {
     align-items: center;
     margin: 10px;
     flex-direction: row-reverse;
+    transition: 0.3sec ease;
 }
 
+.box2:hover {
+    background-color: deepskyblue;
+}
 .box3 {
     grid-area: 3/1/4/2;
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px white;
+    transition: 0.3sec ease;
 }
-
+.box3:hover {
+    background-color: indianred;
+}
 .box4 {
     grid-area: 1/2/4/3;
-
+    padding-left: 15px;
+    transition: 0.5sec ease;
+}
+.box4:hover {
+    background-color: rgb(70, 143, 143);
 }
 
 .img2{
@@ -95,4 +125,27 @@ h1.Horiseon  {
 .para2  {
     text-align: center;
 
+}
+
+@media screen and ( max-width: 768px) {
+    main, 
+    .Navbar {
+        flex-direction: column;
+    }
+    
+    .body {
+        background-color: orange;
+    }
+    .box1 {
+        flex-direction: column;
+    }
+    .box2 {
+        flex-direction: column;
+    }
+    .box3  {
+        flex-direction: column;
+    }
+    .box4 {
+        flex-direction: column;
+    }
 }
